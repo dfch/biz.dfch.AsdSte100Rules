@@ -37,11 +37,19 @@ The CLI can be launched from any working directory:
 """
 
 from pathlib import Path
-from typing import Annotated, Optional
+from typing import Annotated
 
 from dotenv import find_dotenv, load_dotenv
 import typer
 
+from .commands import category
+from .commands import examples
+from .commands import find
+from .commands import match
+from .commands import overview
+from .commands import search
+from .commands import section
+from .commands import toc
 from .info import Info
 
 # ---------------------------------------------------------------------------
@@ -87,7 +95,7 @@ app = typer.Typer(
 def _callback(
     ctx: typer.Context,
     env_file: Annotated[
-        Optional[Path],
+        Path | None,
         typer.Option(
             "--env",
             help=(
@@ -108,6 +116,16 @@ def _callback(
         # ``override=True`` lets a user-supplied .env override values
         # that may have been loaded at import time.
         load_dotenv(env_file, override=True)
+
+
+app.command(epilog=Info.epilog)(find)
+app.command(epilog=Info.epilog)(match)
+app.command(epilog=Info.epilog)(section)
+app.command(epilog=Info.epilog)(category)
+app.command(epilog=Info.epilog)(examples)
+app.command(epilog=Info.epilog)(overview)
+app.command(epilog=Info.epilog)(search)
+app.command(epilog=Info.epilog)(toc)
 
 
 if __name__ == "__main__":

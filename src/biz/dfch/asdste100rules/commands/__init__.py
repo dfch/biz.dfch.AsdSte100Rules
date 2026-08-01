@@ -16,3 +16,23 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 """commands module."""
+
+from .by_category import category
+from .by_section import section
+from .examples import examples
+from .find import find
+from .match import match
+from .overview import overview
+from .search import search
+from .toc import toc
+
+__all__ = [
+    "category",
+    "section",
+    "examples",
+    "find",
+    "match",
+    "overview",
+    "search",
+    "toc",
+]
