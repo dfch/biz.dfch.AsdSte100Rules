@@ -1,0 +1,32 @@
+[
+    {
+        "type_": "rule",
+        "id_": "X1.10",
+        "ref": "ref",
+        "section": "S",
+        "category": "C",
+        "name": "ten",
+        "summary": "summary",
+        "contents": []
+    },
+    {
+        "type_": "rule",
+        "id_": "X1.9",
+        "ref": "ref",
+        "section": "S",
+        "category": "C",
+        "name": "nine",
+        "summary": "summary",
+        "contents": []
+    },
+    {
+        "type_": "rule",
+        "id_": "X1.2",
+        "ref": "ref",
+        "section": "S",
+        "category": "C",
+        "name": "two",
+        "summary": "summary",
+        "contents": []
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "type_": "rule",
+        "id_": "X1.1",
+        "ref": "Test ref 1",
+        "section": "Test Section A",
+        "category": "Test Category A",
+        "name": "Test rule one",
+        "summary": "Summary one",
+        "contents": [
+            {"type_": "text", "data": "Some text"},
+            {"type_": "ste_example", "data": "STE one"}
+        ]
+    }
+]

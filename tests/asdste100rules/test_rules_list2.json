@@ -1,0 +1,25 @@
+[
+    {
+        "type_": "rule",
+        "id_": "X1.2",
+        "ref": "Test ref 2",
+        "section": "Test Section A",
+        "category": "Test Category B",
+        "name": "Test rule two",
+        "summary": "Summary two mentions apple",
+        "contents": [
+            {"type_": "note", "data": "Note two"},
+            {"type_": "nonste_example", "data": "Nonste two"}
+        ]
+    },
+    {
+        "type_": "recommendation",
+        "id_": "GX-1",
+        "ref": "Test ref 3",
+        "section": "Test Section B",
+        "category": "Test Category C",
+        "name": "Test recommendation one mentions banana",
+        "summary": "Summary three",
+        "contents": []
+    }
+]
