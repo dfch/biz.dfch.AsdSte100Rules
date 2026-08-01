@@ -1,0 +1,16 @@
+[
+    {
+        "type_": "rule",
+        "id_": "X9.1",
+        "ref": "ok",
+        "section": "S",
+        "category": "C",
+        "name": "ok",
+        "summary": "ok",
+        "contents": []
+    },
+    {
+        "type_": "rule",
+        "id_": "X9.2"
+    }
+]
