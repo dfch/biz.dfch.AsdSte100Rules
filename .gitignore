@@ -222,3 +222,4 @@ venv*/
 dist/
 desktop.ini
 build/
+.tmp/
