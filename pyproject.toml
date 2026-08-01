@@ -1,0 +1,100 @@
+[build-system]
+requires = ["setuptools>=83.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biz-dfch-asdste100rules"
+version = "0.1.0"
+description = "The ASD-STE100 (Simplified Technical English) Issue 9 rules."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{name = "Ronald Rink"}]
+maintainers = [  
+    { name = "Ronald Rink" }  
+]
+
+keywords = [
+  "ASD-STE100",
+  "dictionary",
+  "cnl",
+  "controlled language",
+  "controlled natural language",
+  "simplified-technical-english",
+  "Simplified Technical English",
+  "STE100",
+  "STE100 Issue 9",
+  "technical writing",
+  "technical-writing",
+  "vocabulary"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Natural Language :: English",
+  "Topic :: Text Processing :: Linguistic",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
+]
+
+dependencies = [
+    "python-dotenv>=1.2.2",
+    "typer>=0.12",
+]
+
+[project.optional-dependencies]
+test = [
+    "coverage",
+    "parameterized>=0.9.0",
+    "pylint>=4.0.0",
+    "ruff>=0.16.0",
+]
+
+dev = [
+    "biz-dfch-asdste100rules[test]",
+    "twine",
+    "build",
+    "rich>=15.0.0",
+    "mypy>=1.18",
+    "uv",
+]
+
+[project.urls]  
+Homepage = "https://github.com/dfch/biz.dfch.asdste100rules.git"  
+Issues = "https://github.com/dfch/biz.dfch.asdste100rules/issues"
+
+[project.scripts]
+rules = "biz.dfch.asdste100rules.cli:app"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["E501"]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.setuptools]  
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.setuptools.package-data]
+"biz.dfch.asdste100rules" = [
+    "data/*.jsonl",
+    "py.typed"
+]
