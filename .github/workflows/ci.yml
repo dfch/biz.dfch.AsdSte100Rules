@@ -40,16 +40,16 @@ jobs:
 
     - name: Verify tools 2
       run: |
-        uv run --frozen python --version
-        uv run --frozen ruff --version
-        uv run --frozen pylint --version
+        uv run --frozen --python "${{ matrix.python-version }}" python --version
+        uv run --frozen --python "${{ matrix.python-version }}" ruff --version
+        uv run --frozen --python "${{ matrix.python-version }}" pylint --version
 
     - name: Analyzing the code with pylint and ruff
       run: |
-        uv run --frozen ruff format --check
-        uv run --frozen ruff check
-        uv run --frozen pylint $(git ls-files '*.py') || true
+        uv run --frozen --python "${{ matrix.python-version }}" ruff format --check
+        uv run --frozen --python "${{ matrix.python-version }}" ruff check
+        uv run --frozen --python "${{ matrix.python-version }}" pylint $(git ls-files '*.py') || true
 
     - name: Run unit tests
       run: |
-        uv run --frozen python -m unittest discover -v -s tests -t . -p "test_*.py"
+        uv run --frozen --python "${{ matrix.python-version }}" python -m unittest discover -v -s tests -t . -p "test_*.py"
