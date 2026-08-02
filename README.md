@@ -27,6 +27,10 @@ The [`Rules`](./src/biz/dfch/asdste100rules/rules.py) class is the query contain
 
 [biz.dfch.AsdSte100Mcp](https://github.com/dfch/biz.dfch.AsdSte100Mcp) uses this library to expose the ruleset over MCP.
 
+ASD-STE100: Copyright by (c) [ASD](https://www.asd-europe.org/).
+
+I am in no way affiliated with ASD. ASD does not endorse my work.
+
 ## Data model
 
 The built-in ASD-STE100 Issue 9 ruleset ships as a single packaged JSON file, [`data/asdste100_issue9_rules.json`](./src/biz/dfch/asdste100rules/data/asdste100_issue9_rules.json) — a pretty-printed JSON array of 66 entries (rules, recommendations, and section-introduction blocks), one object per `Rule`:
