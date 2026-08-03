@@ -8,6 +8,16 @@
 [![PyPI version](https://img.shields.io/badge/dynamic/json?url=https://www.pypi.org/pypi/biz-dfch-asdste100rules/json&label=PyPI&query=$.info.version&color=blue)](https://www.pypi.org/project/biz-dfch-asdste100rules/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/biz-dfch-asdste100rules.svg)](https://pypistats.org/packages/biz-dfch-asdste100rules)
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Data model](#data-model)
+- [Installation](#installation)
+- [Command line usage](#command-line-usage)
+- [Related Projects](#related-projects)
+- [Make a Release](#make-a-release)
+- [License](#license)
+
 ## Introduction
 
 This is a Python library, that implements the [ASD-STE100 Issue 9](https://www.asd-ste100.org/) rules, recommendations, and section-introduction blocks (rule sections 1-11 and the General Recommendations), as a queryable ruleset. A [`Rule`](./src/biz/dfch/asdste100rules/models/rule.py) has these properties:
@@ -125,6 +135,16 @@ uv run rules examples --section Words --kind ste_example
 ```
 
 Every command accepts `--file` (repeatable) to merge in your own JSON rules file(s) alongside, or instead of (`--no-builtin`), the built-in ASD-STE100 Issue 9 ruleset.
+
+## Related Projects
+
+This library is part of the ASD-STE100 tooling family:
+
+* [biz.dfch.AsdSte100Vocab](https://github.com/dfch/biz.dfch.AsdSte100Vocab) — the ASD-STE100 Issue 9 vocabulary library
+* [biz.dfch.AsdSte100Rules](https://github.com/dfch/biz.dfch.AsdSte100Rules) — this repo: the ASD-STE100 Issue 9 ruleset library
+* [biz.dfch.AsdSte100Nlp](https://github.com/dfch/biz.dfch.AsdSte100Nlp) — WordNet-based synonym lookup for ASD-STE100 words
+* [biz.dfch.AsdSte100Lookup](https://github.com/dfch/biz.dfch.AsdSte100Lookup) — an interactive CLI to look up words and rules
+* [biz.dfch.AsdSte100Mcp](https://github.com/dfch/biz.dfch.AsdSte100Mcp) — an MCP server exposing vocabulary and rules lookup tools
 
 ## Make a Release
 
